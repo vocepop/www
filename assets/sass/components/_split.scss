@@ -1,0 +1,43 @@
+///
+/// Hyperspace by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Split */
+
+.split {
+  display: grid;
+  gap: 0;
+
+  > :nth-child(2n - 1) {
+    padding-right: 1.5em;
+    border-right: solid 1px _palette(border);
+  }
+
+  > :nth-child(2n) {
+    padding-left: 1.5em;
+  }
+
+  &.style1 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoint('<=small') {
+    > :nth-child(2n - 1) {
+      padding-right: 0;
+      border-right: 0;
+      border-bottom: solid 1px _palette(border);
+    }
+
+    > :nth-child(2n) {
+      padding-left: 0;
+      padding-top: 2em;
+    }
+
+    &.style1 {
+      grid-auto-rows: auto;
+      grid-template-columns: none;
+    }
+  }
+}

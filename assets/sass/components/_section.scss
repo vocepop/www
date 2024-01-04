@@ -1,0 +1,14 @@
+/* Generic section properties  */
+
+section {
+  &.scrollex {
+    transform: translateX(0) translateY(0);
+    transition: opacity #{_duration(activation)} ease, transform #{_duration(activation)} ease;
+    opacity: 1;
+    &.inactive,
+    body.is-preload & {
+      transform: translateY(1em);
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+///
+/// Hyperspace by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Intro */
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+
+  .teaser {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+
+    /* Bug Apple iOS and/or macOS */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left _size(sidebar-width);
+    @supports (font: -apple-system-body) {
+      background-attachment: initial;
+      background-position: center left;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: _palette(fg);
+    }
+  }
+
+  .inner {
+    position: relative;
+    z-index: 1;
+    h1.p {
+      font-size: 1.25em;
+      color: _palette(fg-dark);
+    }
+  }
+
+  @include breakpoint('<=small') {
+    height: auto;
+
+    .teaser {
+      position: relative;
+      height: 133vw;
+      background-size: auto 133vw;
+      background-position: top center;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

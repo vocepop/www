@@ -1,0 +1,99 @@
+///
+/// Hyperspace by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Header */
+
+#header {
+  display: flex;
+  background-color: _palette(accent1);
+  cursor: default;
+  padding: 1.75em 2em;
+  align-items: baseline;
+
+  /// #header sticky effect
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  /* Bug Apple iOS and/or macOS */
+  @supports (font: -apple-system-body) {
+    position: relative;
+  }
+
+  a.h3 {
+    color: _palette(fg-bold);
+    display: block;
+    margin: 0;
+    border: 0;
+  }
+
+  > nav {
+    flex: 1;
+    text-align: right;
+
+    > ul {
+      margin: 0;
+      padding: 0;
+
+      > li {
+        display: inline-block;
+        margin-left: 1.75em;
+        padding: 0;
+        vertical-align: middle;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        a {
+          border: 0;
+          color: _palette(fg-light);
+          display: inline-block;
+          font-size: _size(menu-size);
+          font-weight: _font(weight-bold);
+          letter-spacing: _font(kerning-alt);
+          text-transform: uppercase;
+
+          &:hover {
+            color: _palette(fg);
+          }
+
+          &.active {
+            color: _palette(fg-bold);
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint('<=small') {
+    display: block;
+    padding: 0 2em;
+    text-align: left;
+
+    .h3 {
+      padding: 1em 0;
+    }
+
+    > nav {
+      border-top: solid 1px _palette(border);
+      text-align: inherit;
+
+      > ul {
+        padding: 1em 0;
+        > li {
+          display: block;
+          margin-left: 0;
+          a {
+            display: block;
+            height: 3em;
+            line-height: 3em;
+          }
+        }
+      }
+    }
+  }
+}

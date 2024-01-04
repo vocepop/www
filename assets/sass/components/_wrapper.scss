@@ -1,0 +1,106 @@
+///
+/// Hyperspace by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Wrapper */
+
+.wrapper {
+  position: relative;
+
+  > .inner {
+    @include padding(5em, 5em);
+    max-width: 100%;
+
+    @include breakpoint('<=small') {
+      @include padding(3em, 2em);
+    }
+  }
+
+  &.alt {
+    background-color: _palette(bg-alt);
+  }
+
+  &.style1 {
+    background-color: _palette(accent1);
+    ul,
+    p,
+    a {
+      color: _palette(fg-dark);
+    }
+    a {
+      border-bottom-color: _palette(fg-dark);
+      &:hover {
+        border-bottom-color: transparent;
+        color: _palette(fg-bold);
+      }
+    }
+  }
+
+  &.style1-alt {
+    background-color: _palette(accent1-alt);
+  }
+
+  &.style2 {
+    background-color: _palette(accent2);
+  }
+
+  &.style2-alt {
+    background-color: _palette(accent2-alt);
+  }
+
+  &.style3 {
+    background-color: _palette(accent3);
+  }
+
+  &.style3-alt {
+    background-color: _palette(accent3-alt);
+  }
+
+  &.fade-up {
+    > .inner {
+      transform: translateY(0);
+      transition: opacity #{_duration(activation)} ease, transform #{_duration(activation)} ease;
+      opacity: 1;
+    }
+
+    &.inactive,
+    body.is-preload & {
+      > .inner {
+        opacity: 0;
+        transform: translateY(1em);
+      }
+    }
+  }
+
+  &.fade-down {
+    > .inner {
+      transform: translateY(0);
+      transition: opacity #{_duration(activation)} ease, transform #{_duration(activation)} ease;
+      opacity: 1;
+    }
+
+    &.inactive,
+    body.is-preload & {
+      > .inner {
+        opacity: 0;
+        transform: translateY(-1em);
+      }
+    }
+  }
+
+  &.fade {
+    > .inner {
+      transition: opacity #{_duration(activation)} ease;
+      opacity: 1;
+    }
+
+    &.inactive,
+    body.is-preload & {
+      > .inner {
+        opacity: 0;
+      }
+    }
+  }
+}
