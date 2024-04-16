@@ -14,6 +14,9 @@
 
   #sidebar + & {
     margin-left: _size(sidebar-width);
+    .wrapper > .inner {
+      max-width: 100%;
+    }
     @include breakpoint('<=small') {
       margin-left: 0;
     }

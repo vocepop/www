@@ -53,6 +53,7 @@ h1.p {
 h1,
 .h1,
 h2,
+.h2,
 h3,
 .h3 {
   font-family: _font(family-heading);
@@ -89,8 +90,12 @@ h1,
   }
 }
 
-h2 {
+h2,
+.h2 {
   font-size: 2em;
+  &.major {
+    margin: 0 0 (_size(element-margin) * 0.65) 0;
+  }
 }
 
 h3,
