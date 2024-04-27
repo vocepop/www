@@ -1552,11 +1552,18 @@ table.alt tfoot {
 .activity .media audio {
   inset: auto 0 0;
   width: 100%;
+  height: 36px;
 }
 .activity .media audio::-webkit-media-controls-enclosure {
-  border-radius: 0;
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+.activity .media audio::-webkit-media-controls-panel {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+@supports (font: -apple-system-body) {
+  .activity .media audio {
+    height: 31px;
+  }
 }
 .activity .media video,
 .activity .media iframe {
@@ -1565,6 +1572,9 @@ table.alt tfoot {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.activity *:last-child {
+  margin-bottom: 0;
 }
 
 /* Spotlights */

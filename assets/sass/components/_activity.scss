@@ -33,10 +33,20 @@
 
       // No support for Safari (every OS)
       &::-webkit-media-controls-enclosure {
-        border-radius: 0;
-        border-bottom-left-radius: _size(border-radius);
-        border-bottom-right-radius: _size(border-radius);
+        border-radius: _size(border-radius);
       }
+      &::-webkit-media-controls-panel {
+        background-color: rgba(white, .1);
+      }
+
+      height: 36px;
+      // Restore Safari
+      @supports (font: -apple-system-body) {
+        & {
+          height: 31px;
+        }
+      }
+
     }
     video,
     iframe {
@@ -46,5 +56,8 @@
       height: 100%;
       object-fit: contain;
     }
+  }
+  *:last-child {
+    margin-bottom: 0;
   }
 }
