@@ -34,9 +34,7 @@
       // No support for Safari (every OS)
       &::-webkit-media-controls-enclosure {
         border-radius: _size(border-radius);
-      }
-      &::-webkit-media-controls-panel {
-        background-color: rgba(white, .1);
+        background-color: rgba(white, .5);
       }
 
       height: 36px;
@@ -57,6 +55,7 @@
       object-fit: contain;
     }
   }
+
   *:last-child {
     margin-bottom: 0;
   }

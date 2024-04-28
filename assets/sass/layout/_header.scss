@@ -71,7 +71,7 @@
 
   @include breakpoint('<=small') {
     display: block;
-    padding: 0 2em;
+    padding: 0 1em;
     text-align: left;
 
     .h3 {
